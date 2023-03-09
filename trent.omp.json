@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"blocks": [
+		{
+			"alignment": "left",
+			"newline": true,
+			"segments": [
+				{
+					"foreground": "#ffbebc",
+					"leading_diamond": "<#ff70a6> \ue200 </>",
+					"properties": {
+						"display_host": true
+					},
+					"style": "diamond",
+					"template": "{{ .UserName }} <#ffffff>on</>",
+					"type": "session"
+				},
+				{
+					"foreground": "#bc93ff",
+					"properties": {
+						"time_format": "Monday <#ffffff>at</> 3:04 PM"
+					},
+					"style": "diamond",
+					"template": " {{ .CurrentDate | date .Format }} ",
+					"type": "time"
+				},
+				{
+					"foreground": "#ee79d1",
+					"properties": {
+						"branch_icon": "\ue725 ",
+						"fetch_stash_count": true,
+						"fetch_status": true,
+						"fetch_upstream_icon": true,
+						"fetch_worktree_count": true
+					},
+					"style": "diamond",
+					"template": "<#ffffff>on</> {{ .HEAD }} ",
+					"type": "git"
+				}
+			],
+			"type": "prompt"
+		},
+		{
+			"alignment": "left",
+			"newline": true,
+			"segments": [
+				{
+					"foreground": "#ffafd2",
+					"leading_diamond": "<#ff70a6> \ue200 </><#ffafd2>{</>",
+					"properties": {
+						"folder_icon": "\uf07b",
+						"folder_separator_icon": "/",
+						"home_icon": "~",
+						"style": "agnoster_full"
+					},
+					"style": "diamond",
+					"template": " \ue5ff {{ .Path }} ",
+					"trailing_diamond": "<#ffafd2>}</>",
+					"type": "path"
+				}
+			],
+			"type": "prompt"
+		},
+		{
+			"alignment": "left",
+			"newline": true,
+			"segments": [
+				{
+					"foreground": "#ffafd2",
+					"leading_diamond": "<#00c7fc> \ue285 ",
+					"style": "diamond",
+					"template": "</>",
+					"type": "path"
+				}
+			],
+			"type": "prompt"
+		}
+	],
+	"console_title_template": "{{ .Folder }}",
+	"transient_prompt": {
+		"background": "transparent",
+		"foreground": "#FEF5ED",
+		"template": "\ue285 "
+	},
+	"version": 2
+}
