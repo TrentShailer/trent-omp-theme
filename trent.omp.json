@@ -1,5 +1,12 @@
 {
 	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"palette": {
+		"os": "#ACB0BE",
+		"closer": "p:os",
+		"pink": "#F4B8E4",
+		"lavender": "#BABBF1",
+		"blue": "#8CAAEE"
+	},
 	"blocks": [
 		{
 			"alignment": "left",
@@ -9,67 +16,65 @@
 				{
 					"type": "session",
 					"style": "plain",
-					"foreground": "#E95678",
-					"template": "{{ .UserName }} <#FEF5ED>at</>"
-					
+					"foreground": "p:blue",
+					"template": "{{ .UserName }}"
 				},
 				{
-					"type": "time",
+					"type": "text",
 					"style": "plain",
-					"foreground": "#F09383",
+					"foreground": "p:os",
+					"template": " in "
+				},
+				{
+					"type": "path",
+					"style": "plain",
+					"foreground": "p:pink",
 					"properties": {
-						"time_format": "3:04pm Monday"
+						"folder_icon": "..",
+						"folder_separator_icon": "/",
+						"home_icon": "~",
+						"style": "agnoster_short",
+						"max_depth": 3
 					},
-					"template": " {{ .CurrentDate | date .Format }} "
+					"template": "{{ .Path }}"
 				},
 				{
 					"type": "git",
 					"style": "plain",
-					"foreground": "#FAB795",
+					"foreground": "p:os",
+					"template": " on "
+				},
+				{
+					"type": "git",
+					"style": "plain",
+					"foreground": "p:lavender",
 					"properties": {
 						"branch_icon": "\ue725 "
 					},
-					"template": "<#FEF5ED>on</> {{ .HEAD }} "
+					"template": "{{ .HEAD }} "
 				}
 			]
 		},
 		{
 			"alignment": "left",
 			"newline": true,
-			"type": "prompt",
+			"segments": [],
+			"type": "prompt"
+		},
+		{
+			"alignment": "left",
+			"newline": true,
 			"segments": [
 				{
-					"type": "path",
 					"style": "plain",
-					"foreground": "#FAC29A",
-					"properties": {
-						"folder_separator_icon": "<b>/</b>",
-						"home_icon": "~",
-						"style": "agnoster_full"
-					},
-					"template": "\ue5ff {{ .Path }} "
-				}
-			]
-		},
-		{
-			"alignment": "left",
-			"newline": true,
-			"segments": [
-				{
-					"foreground": "#FAB795",
-					"leading_diamond": "<#F09383>\uf054</> ",
-					"style": "diamond",
-					"template": "</>",
-					"type": "path"
+					"foreground": "p:closer",
+					"template": "\uf105",
+					"type": "text"
 				}
 			],
 			"type": "prompt"
 		}
 	],
-	"console_title_template": "{{ .Folder }}",
-	"transient_prompt": {
-		"background": "transparent",
-		"foreground": "#FEF5ED"
-	},
+	"final_space": true,
 	"version": 2
 }
