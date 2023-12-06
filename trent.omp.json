@@ -1,12 +1,12 @@
 {
 	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
 	"palette": {
-		"os": "#ACB0BE",
-		"closer": "p:os",
-		"pink": "#F4B8E4",
-		"lavender": "#BABBF1",
-		"blue": "#8CAAEE"
+		"text_fg": "#aaaaaa",
+		"text_bg": "#1d1d1d",
+		"background": "#101010"
 	},
+	"terminal_background": "p:background",
+	"accent_color": "p:text_fg",
 	"blocks": [
 		{
 			"alignment": "left",
@@ -16,19 +16,19 @@
 				{
 					"type": "session",
 					"style": "plain",
-					"foreground": "p:blue",
+					"foreground": "p:text_fg",
 					"template": "{{ .UserName }}"
 				},
 				{
 					"type": "text",
 					"style": "plain",
-					"foreground": "p:os",
+					"foreground": "p:text_bg",
 					"template": " in "
 				},
 				{
 					"type": "path",
 					"style": "plain",
-					"foreground": "p:pink",
+					"foreground": "p:text_fg",
 					"properties": {
 						"folder_icon": "..",
 						"folder_separator_icon": "/",
@@ -41,13 +41,13 @@
 				{
 					"type": "git",
 					"style": "plain",
-					"foreground": "p:os",
+					"foreground": "p:text_bg",
 					"template": " on "
 				},
 				{
 					"type": "git",
 					"style": "plain",
-					"foreground": "p:lavender",
+					"foreground": "p:text_fg",
 					"properties": {
 						"branch_icon": "\ue725 "
 					},
@@ -67,7 +67,7 @@
 			"segments": [
 				{
 					"style": "plain",
-					"foreground": "p:closer",
+					"foreground": "p:text_fg",
 					"template": "\uf105",
 					"type": "text"
 				}
