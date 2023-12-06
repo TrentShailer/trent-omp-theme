@@ -1,9 +1,9 @@
 {
 	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
 	"palette": {
-		"text_fg": "#aaaaaa",
-		"text_bg": "#1d1d1d",
-		"background": "#101010"
+		"text_fg": "#c2c3c3",
+		"text_bg": "#878787",
+		"background": "#1d2021"
 	},
 	"terminal_background": "p:background",
 	"accent_color": "p:text_fg",
