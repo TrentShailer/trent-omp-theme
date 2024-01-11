@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     "palette": {
-        "text": "#ACB0BE",
+        "text": "#626880",
         "pink": "#F4B8E4",
         "lavender": "#BABBF1",
         "blue": "#8CAAEE"
@@ -40,7 +40,7 @@
                     "type": "os",
                     "style": "plain",
                     "foreground": "p:blue",
-                    "template": "WSL"
+                    "template": "{{ if .WSL }} WSL {{ end }}"
                 },
                 {
                     "type": "text",
