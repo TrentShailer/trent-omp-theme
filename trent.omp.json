@@ -1,79 +1,103 @@
 {
-	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-	"palette": {
-		"text": "#ACB0BE",
-		"pink": "#F4B8E4",
-		"lavender": "#BABBF1",
-		"blue": "#8CAAEE"
-	},
-	"blocks": [
-		{
-			"alignment": "left",
-			"newline": true,
-			"type": "prompt",
-			"segments": [
-				{
-					"type": "session",
-					"style": "plain",
-					"foreground": "p:blue",
-					"template": "{{ .UserName }}"
-				},
-				{
-					"type": "text",
-					"style": "plain",
-					"foreground": "p:text",
-					"template": " in "
-				},
-				{
-					"type": "path",
-					"style": "plain",
-					"foreground": "p:pink",
-					"properties": {
-						"folder_icon": "..",
-						"folder_separator_icon": "/",
-						"home_icon": "~",
-						"style": "agnoster_short",
-						"max_depth": 3
-					},
-					"template": "{{ .Path }}"
-				},
-				{
-					"type": "git",
-					"style": "plain",
-					"foreground": "p:text",
-					"template": " on "
-				},
-				{
-					"type": "git",
-					"style": "plain",
-					"foreground": "p:lavender",
-					"properties": {
-						"branch_icon": "\ue725 "
-					},
-					"template": "{{ .HEAD }} "
-				}
-			]
-		},
-		{
-			"alignment": "left",
-			"newline": true,
-			"segments": [],
-			"type": "prompt"
-		},
-		{
-			"alignment": "left",
-			"newline": true,
-			"segments": [
-				{
-					"style": "plain",
-					"foreground": "p:text",
-					"template": "\uf105",
-					"type": "text"
-				}
-			],
-			"type": "prompt"
-		}
-	],
-	"final_space": true,
-	"version": 2
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "palette": {
+        "text": "#ACB0BE",
+        "pink": "#F4B8E4",
+        "lavender": "#BABBF1",
+        "blue": "#8CAAEE"
+    },
+    "blocks": [
+        {
+            "alignment": "left",
+            "newline": true,
+            "type": "prompt",
+            "segments": [
+                {
+                    "type": "session",
+                    "style": "plain",
+                    "foreground": "p:blue",
+                    "template": "{{ if .Root}}root{{ else }}{{ .UserName }}{{ end }}"
+                },
+                {
+                    "type": "session",
+                    "style": "plain",
+                    "foreground": "p:text",
+                    "template": "@"
+                },
+                {
+                    "type": "session",
+                    "style": "plain",
+                    "foreground": "p:blue",
+                    "template": "{{ .HostName }}"
+                },
+                {
+                    "type": "os",
+                    "style": "plain",
+                    "foreground": "p:text",
+                    "template": "{{ if .WSL }} on {{ end }}"
+                },
+                {
+                    "type": "os",
+                    "style": "plain",
+                    "foreground": "p:blue",
+                    "template": "WSL"
+                },
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "p:text",
+                    "template": " in "
+                },
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "foreground": "p:pink",
+                    "properties": {
+                        "folder_icon": "..",
+                        "folder_separator_icon": "/",
+                        "home_icon": "~",
+                        "style": "agnoster_short",
+                        "max_depth": 3
+                    },
+                    "template": "{{ .Path }}"
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "foreground": "p:text",
+                    "template": " on "
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "foreground": "p:lavender",
+                    "properties": {
+                        "branch_icon": "\ue725 "
+                    },
+                    "template": "{{ .HEAD }} "
+                }
+            ]
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "style": "plain",
+                    "foreground": "p:text",
+                    "template": "\uf105",
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "final_space": true,
+    "version": 2
 }
