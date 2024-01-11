@@ -52,7 +52,7 @@
                 {
                     "type": "path",
                     "style": "plain",
-                    "foreground": "p:pink",
+                    "foreground": "p:blue",
                     "properties": {
                         "folder_icon": "..",
                         "folder_separator_icon": "/",
@@ -71,7 +71,7 @@
                 {
                     "type": "git",
                     "style": "plain",
-                    "foreground": "p:lavender",
+                    "foreground": "p:blue",
                     "properties": {
                         "branch_icon": "\ue725 "
                     },
