@@ -40,7 +40,7 @@
                     "type": "os",
                     "style": "plain",
                     "foreground": "p:blue",
-                    "template": "{{ if .WSL }} WSL {{ end }}"
+                    "template": "{{ if .WSL }}WSL{{ end }}"
                 },
                 {
                     "type": "text",
