@@ -73,7 +73,7 @@
 					"style": "plain",
 					"foreground": "p:blue",
 					"properties": {
-						"branch_icon": "\ue725 "
+						"branch_icon": "⇵ "
 					},
 					"template": "{{ .HEAD }} "
 				}
@@ -92,7 +92,7 @@
 				{
 					"style": "plain",
 					"foreground": "p:text",
-					"template": "\uf105",
+					"template": "> ",
 					"type": "text"
 				}
 			],
@@ -101,5 +101,5 @@
 	],
 	"final_space": true,
 	"version": 2,
-	"auto_upgrade": true
+	"auto_upgrade": false
 }
